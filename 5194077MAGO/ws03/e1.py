@@ -3,6 +3,7 @@
 #Recieve the data from the user
 mark = float(input("How many marks? "))
 
+#Calculate the grade by marks
 if mark >= 85:
     print (7)
 elif 85 > mark >= 75:

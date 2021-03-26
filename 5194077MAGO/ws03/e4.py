@@ -8,6 +8,7 @@ OVERHOUR = 1.5*WAGE
 workHours = int(input("How many hours were worked? "))
 cars = int(input("Total number of cars sold for the week? "))
 
+#Calculate the wage by work hours and the number of cars sold
 if workHours > 37:
     salary = 37*WAGE+(workHours-37)*OVERHOUR
     if cars > 5:
