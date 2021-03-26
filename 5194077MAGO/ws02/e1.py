@@ -6,4 +6,4 @@ width = float(input("Width of park (m): "))
 litres = float(input("Litres per square metre: "))
 
 #Print the result of the litres per square metre of the retangle
-print ("Litres required = ", (length*width)*litres)
+print ("Litres required = ", length*width*litres)
