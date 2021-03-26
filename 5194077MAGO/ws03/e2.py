@@ -22,4 +22,4 @@ else:
 #Calculate the final cost of the delivery
 cost = baseprice * weight * distance * (1 - discount)
 
-print ('The shipping cost is ',cost) 
+print ('\nThe shipping cost is ',cost) 

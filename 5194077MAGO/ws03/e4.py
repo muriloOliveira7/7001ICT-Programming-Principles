@@ -15,5 +15,7 @@ if workHours > 37:
         salary = salary + (cars-5)*200
 else:
     salary = workHours*WAGE
+    if cars > 5:
+        salary = salary + (cars-5)*200
 
-print ('The salary is ',salary)
+print ('\nThe salary is ',salary)
