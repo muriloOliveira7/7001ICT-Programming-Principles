@@ -8,15 +8,16 @@ num1 = (int(input("Integer 1? ")))
 num2 = (int(input("Integer 2? ")))
 num3 = (int(input("Integer 3? ")))
 
-#Easy Way
+#Using List to solve the problem
 num.append (num1)
 num.append (num2)
 num.append (num3)
 
+#Sorting the elements descendent
 num.sort(reverse=True)
-print ('Sorted:', num)
+print ('\nSorted:', *num)
 
-#Another Way
+#Sorting the elements with 'if' statments
 if num1 > num2 and num1 > num3:
     large = num1
     if num3 > num2:

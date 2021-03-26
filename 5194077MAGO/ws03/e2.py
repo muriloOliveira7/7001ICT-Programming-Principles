@@ -5,6 +5,7 @@ baseprice = float(input("How much is the base price? "))
 weight = float(input("What is the weight? "))
 distance = float(input("What is the distance? "))
 
+#Calculate discount by the distance
 if distance < 250:
     discount = 0
 elif 250 <= distance < 500:
@@ -18,6 +19,7 @@ elif 2000 <= distance < 3000:
 else:
     discount = 0.50
 
+#Calculate the final cost of the delivery
 cost = baseprice * weight * distance * (1 - discount)
 
-print ('The shipping cost is ',cost) 
+print ('\nThe shipping cost is ',cost) 
