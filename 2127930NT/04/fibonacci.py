@@ -15,5 +15,11 @@ while x < length:
 	x = y
 	y = z
 	count += 1
+
 #use map function to convert items in list to a string and then join use space ' ' as separator
-print (' '.join(map(str, list1)))
+# print (' '.join(map(str, list1)))
+# partition list into sub-lists using matrices with a maximum width of 4
+matrix = [list1[i:i+4] for i in range(0,len(list1),4)]
+for l in matrix:
+		# use map function to convert items in list to a string and then join using space ' ' as separator
+		print (' '.join(map(str, l)))
