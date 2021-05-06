@@ -1,0 +1,41 @@
+String Methods
+Strings implement all of the common sequence operations, along with the additional methods described below.
+
+Strings also support two styles of string formatting, one providing a large degree of flexibility and customization (see str.format(), Format String Syntax and Custom String Formatting) and the other based on C printf style formatting that handles a narrower range of types and is slightly harder to use correctly, but is often faster for the cases it can handle (printf-style String Formatting).
+
+The Text Processing Services section of the standard library covers a number of other modules that provide various text related utilities (including regular expression support in the re module).
+
+str.capitalize()
+Return a copy of the string with its first character capitalized and the rest lowercased.
+
+Changed in version 3.8: The first character is now put into titlecase rather than uppercase. This means that characters like digraphs will only have their first letter capitalized, instead of the full character.
+
+str.casefold()
+Return a casefolded copy of the string. Casefolded strings may be used for caseless matching.
+
+Casefolding is similar to lowercasing but more aggressive because it is intended to remove all case distinctions in a string. For example, the German lowercase letter '?' is equivalent to "ss". Since it is already lowercase, lower() would do nothing to '?'; casefold() converts it to "ss".
+
+The casefolding algorithm is described in section 3.13 of the Unicode Standard.
+
+New in version 3.3.
+
+str.center(width[, fillchar])
+Return centered in a string of length width. Padding is done using the specified fillchar (default is an ASCII space). The original string is returned if width is less than or equal to len(s).
+
+str.count(sub[, start[, end]])
+Return the number of non-overlapping occurrences of substring sub in the range [start, end]. Optional arguments start and end are interpreted as in slice notation.
+
+str.encode(encoding="utf-8", errors="strict")
+Return an encoded version of the string as a bytes object. Default encoding is 'utf-8'. errors may be given to set a different error handling scheme. The default for errors is 'strict', meaning that encoding errors raise a UnicodeError. Other possible values are 'ignore', 'replace', 'xmlcharrefreplace', 'backslashreplace' and any other name registered via codecs.register_error(), see section Error Handlers. For a list of possible encodings, see section Standard Encodings.
+
+By default, the errors argument is not checked for best performances, but only used at the first encoding error. Enable the Python Development Mode, or use a debug build to check errors.
+
+Changed in version 3.1: Support for keyword arguments added.
+
+Changed in version 3.9: The errors is now checked in development mode and in debug mode.
+
+str.endswith(suffix[, start[, end]])
+Return True if the string ends with the specified suffix, otherwise return False. suffix can also be a tuple of suffixes to look for. With optional start, test beginning at that position. With optional end, stop comparing at that position.
+
+str.expandtabs(tabsize=8)
+Return a copy of the string where all tab characters are replaced by one or more spaces, depending on the current column and the given tab size. Tab positions occur every tabsize characters (default is 8, giving tab positions at columns 0, 8, 16 and so on). To expand the string, the current column is set to zero and the string is examined character by character. If the character is a tab (\t), one or more space characters are inserted in the result until the current column is equal to the next tab position. (The tab character itself is not copied.) If the character is a newline (\n) or return (\r), it is copied and the current column is reset to zero. Any other character is copied unchanged and the current column is incremented by one regardless of how the character is represented when printed.
