@@ -23,6 +23,6 @@ with open(inputFile, 'r') as file_in:
         #get the lenght of the line to get all characters
         characrtersInFile += len(line)
 
-print (characrtersInFile)
-print (wordsInFile)
-print (linesInFile)
+print ('Characters:',characrtersInFile)
+print ('Words:',wordsInFile)
+print ('Lines:',linesInFile)
