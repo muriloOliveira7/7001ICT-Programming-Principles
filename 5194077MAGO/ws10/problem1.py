@@ -13,7 +13,7 @@ class GoCard:
         """Update the GoCard balance with the new transction."""
         self.balance = self.balance + transaction
 
-    def current_balance(self):
+    def get_current_balance(self):
         """Print the GoCard current balance."""
         print ('Balance = $'+'%.2f' %self.balance)
     
@@ -76,6 +76,6 @@ while True:
             print ('Enter a valid value')
     #Print condition
     elif userInputList[0] == 'b':
-        userGoCard.current_balance()
+        userGoCard.get_current_balance()
     else:
         print ('Bad command.')
